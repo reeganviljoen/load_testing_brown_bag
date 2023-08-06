@@ -2,9 +2,16 @@
 <% @items.each do |item| %>
   <div style='border: 1px solid;'>
     <p><%= item.name %></p>
-    <ul>
+    <h3>Comments<h3>
+    <ul style='border: 1px solid;'>
       <% item.comments.each do |comment| %>
         <li><%= comment.body %></li>
+        <h3> Replies </h3>
+        <ul>
+          <% comment.replies.each do |reply| %>
+            <li><%= reply.body %></li>
+          <% end %>
+        </ul>
       <% end %>
     </ul>
   </div>
