@@ -2,6 +2,7 @@ databases:
   - name: handling_the_load
     databaseName: handling_the_load
     user: handling_the_load
+    plan: free
 
 services:
   - type: web
