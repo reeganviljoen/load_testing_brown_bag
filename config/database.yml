@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: load_testing_brown_bag_production
-  username: load_testing_brown_bag
-  password: <%= ENV["LOAD_TESTING_BROWN_BAG_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
